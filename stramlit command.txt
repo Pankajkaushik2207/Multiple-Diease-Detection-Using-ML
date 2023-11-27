@@ -1,0 +1,1 @@
+streamlit run "E:\Multiple Diease Detection\multiple disease  app.py.py"
