@@ -255,11 +255,12 @@ from streamlit_option_menu import option_menu
 
 # Loading the saved models
 # Use absolute paths
-base_path = 'E:/Multiple Diease Detection/saved modules/'
 
-diabetes_model_path = os.path.abspath(os.path.join(base_path, 'diabetes_model.sav'))
-heart_disease_model_path = os.path.abspath(os.path.join(base_path, 'heart_disease_model.sav'))
-parkinsons_model_path = os.path.abspath(os.path.join(base_path, 'parkinsons_model.sav'))
+base_path = os.path.dirname(os.path.abspath(__file__))  # Get the directory of the current script
+
+diabetes_model_path = os.path.join(base_path, 'saved modules', 'diabetes_model.sav')
+heart_disease_model_path = os.path.join(base_path, 'saved modules', 'heart_disease_model.sav')
+parkinsons_model_path = os.path.join(base_path, 'saved modules', 'parkinsons_model.sav')
 
 diabetes_model = pickle.load(open(diabetes_model_path, 'rb'))
 heart_disease_model = pickle.load(open(heart_disease_model_path, 'rb'))
