@@ -1,0 +1,7 @@
+# render.yaml
+
+services:
+- name: streamlit
+  env: python
+  build_command: pip install -r requirements.txt
+  start_command: streamlit run your_app_file.py
